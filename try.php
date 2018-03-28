@@ -26,9 +26,9 @@ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
           <Apartment></Apartment>
         </CustomerDC>
         <MerchantDC>
-          <merchant_code>'.$code.'</merchant_code>
-          <merchant_username>'.$user.'</merchant_username>
-          <merchant_password>'.$password.'</merchant_password>
+          <merchant_code>999999</merchant_code>
+          <merchant_username>testapi@myfatoorah.com</merchant_username>
+          <merchant_password>E55D0</merchant_password>
           <merchant_ReferenceID>1244dasd8asd8asd4a84d8</merchant_ReferenceID>
           <ReturnURL>'.$return_url.'</ReturnURL>
           <merchant_error_url>https://google.com?q=wrong</merchant_error_url>
@@ -59,7 +59,7 @@ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
   </soap:Body>
 </soap:Envelope>';
 
-$url = "https://www.myfatoorah.com/pg/PayGatewayServiceV2.asmx";
+$url = "https://www.test.myfatoorah.com/pg/PayGatewayServiceV2.asmx";
 $soap_do = curl_init();
 curl_setopt($soap_do, CURLOPT_URL,$url );
 curl_setopt($soap_do, CURLOPT_CONNECTTIMEOUT, 10);
