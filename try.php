@@ -1,12 +1,12 @@
 <?php
 $price = $_GET['price'];
 $return_url = $_GET['url'];
-// $user = "Tracksuccess@gmail.com";
-// $password = "DMAdma";
-// $code = "23510021924";
-$user = "testapi@myfatoorah.com";
-$password = "E55D0";
-$code = "999999";
+$user = "Tracksuccess@gmail.com";
+$password = "DMAdma";
+$code = "23510021924";
+// $user = "testapi@myfatoorah.com";
+// $password = "E55D0";
+// $code = "999999";
 $post_string = '<?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
@@ -62,7 +62,7 @@ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
   </soap:Body>
 </soap:Envelope>';
 
-$url = "https://test.myfatoorah.com/pg/PayGatewayServiceV2.asmx";
+$url = "https://www.myfatoorah.com/pg/PayGatewayServiceV2.asmx";
 $soap_do = curl_init();
 curl_setopt($soap_do, CURLOPT_URL,$url );
 curl_setopt($soap_do, CURLOPT_CONNECTTIMEOUT, 10);
