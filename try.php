@@ -1,9 +1,12 @@
 <?php
 $price = $_GET['price'];
 $return_url = $_GET['url'];
-$user = "Tracksuccess@gmail.com";
-$password = "DMAdma";
-$code = "23510021924";
+// $user = "Tracksuccess@gmail.com";
+// $password = "DMAdma";
+// $code = "23510021924";
+$user = "testapi@myfatoorah.com";
+$password = "E55D0";
+$code = "999999";
 $post_string = '<?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
@@ -26,9 +29,9 @@ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
           <Apartment></Apartment>
         </CustomerDC>
         <MerchantDC>
-          <merchant_code>999999</merchant_code>
-          <merchant_username>testapi@myfatoorah.com</merchant_username>
-          <merchant_password>E55D0</merchant_password>
+          <merchant_code>'.$code.'</merchant_code>
+          <merchant_username>'.$user.'</merchant_username>
+          <merchant_password>'.$password.'</merchant_password>
           <merchant_ReferenceID>1244dasd8asd8asd4a84d8</merchant_ReferenceID>
           <ReturnURL>'.$return_url.'</ReturnURL>
           <merchant_error_url>https://google.com?q=wrong</merchant_error_url>
@@ -82,7 +85,7 @@ curl_close($soap_do);
 
 $res = substr($result,483,-147);
 $data = [
-  "id"=> $result
+  "id"=> $res
 ];
 header('Content-Type: application/json');
 echo json_encode($data);
