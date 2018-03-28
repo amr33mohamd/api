@@ -62,7 +62,7 @@ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
   </soap:Body>
 </soap:Envelope>';
 
-$url = "https://www.test.myfatoorah.com/pg/PayGatewayServiceV2.asmx";
+$url = "https://test.myfatoorah.com/pg/PayGatewayServiceV2.asmx";
 $soap_do = curl_init();
 curl_setopt($soap_do, CURLOPT_URL,$url );
 curl_setopt($soap_do, CURLOPT_CONNECTTIMEOUT, 10);
