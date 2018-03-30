@@ -85,7 +85,7 @@ curl_close($soap_do);
 
 $res = substr($result,483,-147);
 $data = [
-  "id"=> $result
+  "id"=> $res
 ];
 header('Content-Type: application/json');
 echo json_encode($data);
